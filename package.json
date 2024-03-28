@@ -2,6 +2,7 @@
   "type": "module",
   "name": "cdk-app",
   "version": "0.1.0",
+  "packageManager": "pnpm@8.15.5",
   "bin": {
     "cdk-app": "bin/cdk-app.js"
   },
@@ -10,7 +11,7 @@
     "watch": "tsc -w",
     "test": "vitest --run",
     "cdk": "cdk",
-    "prepare": "husky install"
+    "prepare": "husky init"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.3",
