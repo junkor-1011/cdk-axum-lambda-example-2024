@@ -37,6 +37,7 @@ export class ApiSystemWithLayer extends Construct {
     );
 
     const apiBackendFunction = new RustFunction(this, 'greet', {
+      functionName: 'axum-server-function',
       manifestPath: path.join(
         __dirname,
         '../../rust-workspace/axum-api/Cargo.toml',

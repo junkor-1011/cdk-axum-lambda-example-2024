@@ -214,7 +214,7 @@ exports[`snapshot test 1`] = `
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemwithlayerAPIusingaxumDeployment53C53BE834b83301ba568550ee6190aacfb7d040": {
+    "apisystemwithlayerAPIusingaxumDeployment53C53BE8684b28d78b24a0fbf02bc9904e901825": {
       "DependsOn": [
         "apisystemwithlayerAPIusingaxumproxyANYE9763BE6",
         "apisystemwithlayerAPIusingaxumproxy15678E58",
@@ -234,7 +234,7 @@ exports[`snapshot test 1`] = `
       ],
       "Properties": {
         "DeploymentId": {
-          "Ref": "apisystemwithlayerAPIusingaxumDeployment53C53BE834b83301ba568550ee6190aacfb7d040",
+          "Ref": "apisystemwithlayerAPIusingaxumDeployment53C53BE8684b28d78b24a0fbf02bc9904e901825",
         },
         "RestApiId": {
           "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
@@ -411,6 +411,7 @@ exports[`snapshot test 1`] = `
             "RUST_LOG": "debug",
           },
         },
+        "FunctionName": "axum-server-function",
         "Handler": "bootstrap",
         "Layers": [
           {
