@@ -40,7 +40,7 @@ export class ApiSystemWithLayer extends Construct {
       functionName: 'axum-server-function',
       manifestPath: path.join(
         __dirname,
-        '../../rust-workspace/axum-api/Cargo.toml',
+        '../../rust-workspace/axum-server/Cargo.toml',
       ),
       timeout: cdk.Duration.seconds(10),
       memorySize: 128,

@@ -99,7 +99,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "axum-api"
+name = "axum-app-core"
 version = "0.1.0"
 dependencies = [
  "anyhow",
@@ -135,6 +135,17 @@ dependencies = [
  "tower-layer",
  "tower-service",
  "tracing",
+]
+
+[[package]]
+name = "axum-server"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "axum-app-core",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
 ]
 
 [[package]]
