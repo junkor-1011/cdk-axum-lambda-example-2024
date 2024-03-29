@@ -1,7 +1,7 @@
 [workspace]
 
 members = [
-    "axum-app-core",
+    "axum-app-core", "axum-lambda-http",
     "axum-server",
 ]
 resolver = "2"

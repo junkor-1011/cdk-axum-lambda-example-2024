@@ -16,7 +16,7 @@ export interface ApiSystemWithLayerProps {
   readonly name: string;
 }
 
-export class ApiSystemWithLayer extends Construct {
+export class ApiSystemWithoutLayer extends Construct {
   public readonly name: string;
 
   constructor(scope: Construct, id: string, props: ApiSystemWithLayerProps) {
@@ -24,36 +24,23 @@ export class ApiSystemWithLayer extends Construct {
 
     this.name = props.name;
 
-    const lambdaWebAdapterLayer = new lambda.LayerVersion(
-      this,
-      'LambdaWebAdapter',
-      {
-        code: lambda.Code.fromDockerBuild(
-          path.join(__dirname, '../../layers/lambda-web-adapter'),
-        ),
-        // compatibleRuntimes: [lambda.Runtime.PROVIDED_AL2023],
-        compatibleArchitectures: [lambda.Architecture.X86_64],
-      },
-    );
-
-    const apiBackendFunction = new RustFunction(this, 'axum-lambda-server', {
-      functionName: 'axum-server-function',
+    const apiBackendFunction = new RustFunction(this, 'axum-lambda-http', {
+      functionName: 'axum-lambda-http',
       manifestPath: path.join(
         __dirname,
-        '../../rust-workspace/axum-server/Cargo.toml',
+        '../../rust-workspace/axum-lambda-http/Cargo.toml',
       ),
       timeout: cdk.Duration.seconds(10),
       memorySize: 128,
       architecture: lambda.Architecture.X86_64,
-      layers: [lambdaWebAdapterLayer],
       tracing: lambda.Tracing.ACTIVE,
       environment: {
         RUST_LOG: 'debug',
-        PORT: '3000',
+        AWS_LAMBDA_HTTP_IGNORE_STAGE_IN_PATH: 'true',
       },
     });
 
-    new apigateway.LambdaRestApi(this, 'API using axum', {
+    new apigateway.LambdaRestApi(this, 'API using axum and lambda-http', {
       handler: apiBackendFunction,
       proxy: true, // handling all routing & all methods
     });
