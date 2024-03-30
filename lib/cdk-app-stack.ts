@@ -1,19 +1,25 @@
 import { Stack, type StackProps } from 'aws-cdk-lib';
 import type { Construct } from 'constructs';
 
-import { ApiSystemWithLayer } from './constructs/api-sytem-with-layer';
-import { ApiSystemWithoutLayer } from './constructs/api-sytem-without-layer';
+import { LambdaHttpARM64ExampleStack } from './lambda-http-aarch64-substack';
+import { LambdaHttpAMD64ExampleStack } from './lambda-http-amd64-substack';
+import { LambdaWebAdapterARM64ExampleStack } from './lambda-web-adapter-aarch64-substack';
+import { LambdaWebAdapterAMD64ExampleStack } from './lambda-web-adapter-amd64-substack';
 
 export class CdkAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    new ApiSystemWithLayer(this, 'api-system-with-layer', {
-      name: 'api-system-with-layer',
-    });
+    new LambdaWebAdapterAMD64ExampleStack(
+      this,
+      'LambdaWebAdapterAMD64Example-NestedStack',
+    );
+    new LambdaHttpAMD64ExampleStack(this, 'LambdaHttpAMD64Example-NestedStack');
 
-    new ApiSystemWithoutLayer(this, 'api-system-without-layer', {
-      name: 'api-system-without-layer',
-    });
+    new LambdaWebAdapterARM64ExampleStack(
+      this,
+      'LambdaWebAdapterARM64Example-NestedStack',
+    );
+    new LambdaHttpARM64ExampleStack(this, 'LambdaHttpARM64Example-NestedStack');
   }
 }
