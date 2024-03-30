@@ -1,16 +1,165 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`snapshot test 1`] = `
+exports[`snapshot test(root stack) 1`] = `
+{
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "LambdaHttpAMD64ExampleNestedStackNestedStackLambdaHttpAMD64ExampleNestedStackNestedStackResourceF44BEBEF": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "TemplateURL": {
+          "Fn::Join": [
+            "",
+            [
+              "https://s3.",
+              {
+                "Ref": "AWS::Region",
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix",
+              },
+              "/",
+              {
+                "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+              },
+              "/8e5969b60fd89517fe844df3aa394692f01f9b8771659a99bea7bf05c1cfc9ae.json",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::CloudFormation::Stack",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "LambdaHttpARM64ExampleNestedStackNestedStackLambdaHttpARM64ExampleNestedStackNestedStackResource96BE0E6A": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "TemplateURL": {
+          "Fn::Join": [
+            "",
+            [
+              "https://s3.",
+              {
+                "Ref": "AWS::Region",
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix",
+              },
+              "/",
+              {
+                "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+              },
+              "/f03c621dcecfa0a9a40fd03cae38b9f5614b34c03477a4c984423e953cedb5fa.json",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::CloudFormation::Stack",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "LambdaWebAdapterAMD64ExampleNestedStackNestedStackLambdaWebAdapterAMD64ExampleNestedStackNestedStackResource5E068E1B": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "TemplateURL": {
+          "Fn::Join": [
+            "",
+            [
+              "https://s3.",
+              {
+                "Ref": "AWS::Region",
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix",
+              },
+              "/",
+              {
+                "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+              },
+              "/9e5bc66e4c5ce9fa88b960965279178e3b57f2a13ad8a522fcfed8efa8e4e7ea.json",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::CloudFormation::Stack",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "LambdaWebAdapterARM64ExampleNestedStackNestedStackLambdaWebAdapterARM64ExampleNestedStackNestedStackResource4545B0A2": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "TemplateURL": {
+          "Fn::Join": [
+            "",
+            [
+              "https://s3.",
+              {
+                "Ref": "AWS::Region",
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix",
+              },
+              "/",
+              {
+                "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+              },
+              "/57e75e7bdd77ba8b03ec807814c7b4b98de04e7d76bf1084260f4f60418c5b89.json",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::CloudFormation::Stack",
+      "UpdateReplacePolicy": "Delete",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`snapshot test(root stack) 2`] = `
 {
   "Outputs": {
-    "apisystemwithlayerAPIusingaxumEndpointAFBBC82B": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664Endpoint8AE4E42E": {
       "Value": {
         "Fn::Join": [
           "",
           [
             "https://",
             {
-              "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+              "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
             },
             ".execute-api.",
             {
@@ -22,7 +171,7 @@ exports[`snapshot test 1`] = `
             },
             "/",
             {
-              "Ref": "apisystemwithlayerAPIusingaxumDeploymentStageprod525A5E6F",
+              "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664DeploymentStageprodCFB0138B",
             },
             "/",
           ],
@@ -30,21 +179,8 @@ exports[`snapshot test 1`] = `
       },
     },
   },
-  "Parameters": {
-    "BootstrapVersion": {
-      "Default": "/cdk-bootstrap/hnb659fds/version",
-      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
-      "Type": "AWS::SSM::Parameter::Value<String>",
-    },
-  },
   "Resources": {
-    "apisystemwithlayerAPIusingaxumAE5651FB": {
-      "Properties": {
-        "Name": "API using axum",
-      },
-      "Type": "AWS::ApiGateway::RestApi",
-    },
-    "apisystemwithlayerAPIusingaxumANY741C500F": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664ANY3C096C2C": {
       "Properties": {
         "AuthorizationType": "NONE",
         "HttpMethod": "ANY",
@@ -66,7 +202,7 @@ exports[`snapshot test 1`] = `
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "apisystemwithlayergreetF7497C77",
+                    "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814",
                     "Arn",
                   ],
                 },
@@ -77,22 +213,22 @@ exports[`snapshot test 1`] = `
         },
         "ResourceId": {
           "Fn::GetAtt": [
-            "apisystemwithlayerAPIusingaxumAE5651FB",
+            "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
             "RootResourceId",
           ],
         },
         "RestApiId": {
-          "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
         },
       },
       "Type": "AWS::ApiGateway::Method",
     },
-    "apisystemwithlayerAPIusingaxumANYApiPermissionTestStackapisystemwithlayerAPIusingaxum3BE90064ANYF1C0259D": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664ANYApiPermissionTestRootStackLambdaWebAdapterAMD64ExampleNestedStackapisystemusingwebadapterlayeramd64APIusingaxumx86643C73A052ANY7126A2FD": {
       "Properties": {
         "Action": "lambda:InvokeFunction",
         "FunctionName": {
           "Fn::GetAtt": [
-            "apisystemwithlayergreetF7497C77",
+            "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814",
             "Arn",
           ],
         },
@@ -115,11 +251,11 @@ exports[`snapshot test 1`] = `
               },
               ":",
               {
-                "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+                "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
               },
               "/",
               {
-                "Ref": "apisystemwithlayerAPIusingaxumDeploymentStageprod525A5E6F",
+                "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664DeploymentStageprodCFB0138B",
               },
               "/*/",
             ],
@@ -128,12 +264,12 @@ exports[`snapshot test 1`] = `
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "apisystemwithlayerAPIusingaxumANYApiPermissionTestTestStackapisystemwithlayerAPIusingaxum3BE90064ANY06BACD4B": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664ANYApiPermissionTestTestRootStackLambdaWebAdapterAMD64ExampleNestedStackapisystemusingwebadapterlayeramd64APIusingaxumx86643C73A052ANY280A89B0": {
       "Properties": {
         "Action": "lambda:InvokeFunction",
         "FunctionName": {
           "Fn::GetAtt": [
-            "apisystemwithlayergreetF7497C77",
+            "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814",
             "Arn",
           ],
         },
@@ -156,7 +292,7 @@ exports[`snapshot test 1`] = `
               },
               ":",
               {
-                "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+                "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
               },
               "/test-invoke-stage/*/",
             ],
@@ -165,15 +301,15 @@ exports[`snapshot test 1`] = `
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "apisystemwithlayerAPIusingaxumAccount8CC61821": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664Account088C3AAD": {
       "DeletionPolicy": "Retain",
       "DependsOn": [
-        "apisystemwithlayerAPIusingaxumAE5651FB",
+        "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
       ],
       "Properties": {
         "CloudWatchRoleArn": {
           "Fn::GetAtt": [
-            "apisystemwithlayerAPIusingaxumCloudWatchRole021999ED",
+            "apisystemusingwebadapterlayeramd64APIusingaxumx8664CloudWatchRole2AA778AD",
             "Arn",
           ],
         },
@@ -181,7 +317,7 @@ exports[`snapshot test 1`] = `
       "Type": "AWS::ApiGateway::Account",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemwithlayerAPIusingaxumCloudWatchRole021999ED": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664CloudWatchRole2AA778AD": {
       "DeletionPolicy": "Retain",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -214,129 +350,42 @@ exports[`snapshot test 1`] = `
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemwithlayerAPIusingaxumDeployment53C53BE8684b28d78b24a0fbf02bc9904e901825": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664Deployment2F7070F26255e0d08ae0c953b8fe519c8c57ab30": {
       "DependsOn": [
-        "apisystemwithlayerAPIusingaxumproxyANYE9763BE6",
-        "apisystemwithlayerAPIusingaxumproxy15678E58",
-        "apisystemwithlayerAPIusingaxumANY741C500F",
+        "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyANY6BFD5804",
+        "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyF094462F",
+        "apisystemusingwebadapterlayeramd64APIusingaxumx8664ANY3C096C2C",
       ],
       "Properties": {
         "Description": "Automatically created by the RestApi construct",
         "RestApiId": {
-          "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
         },
       },
       "Type": "AWS::ApiGateway::Deployment",
     },
-    "apisystemwithlayerAPIusingaxumDeploymentStageprod525A5E6F": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664DeploymentStageprodCFB0138B": {
       "DependsOn": [
-        "apisystemwithlayerAPIusingaxumAccount8CC61821",
+        "apisystemusingwebadapterlayeramd64APIusingaxumx8664Account088C3AAD",
       ],
       "Properties": {
         "DeploymentId": {
-          "Ref": "apisystemwithlayerAPIusingaxumDeployment53C53BE8684b28d78b24a0fbf02bc9904e901825",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664Deployment2F7070F26255e0d08ae0c953b8fe519c8c57ab30",
         },
         "RestApiId": {
-          "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
         },
         "StageName": "prod",
       },
       "Type": "AWS::ApiGateway::Stage",
     },
-    "apisystemwithlayerAPIusingaxumproxy15678E58": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F": {
       "Properties": {
-        "ParentId": {
-          "Fn::GetAtt": [
-            "apisystemwithlayerAPIusingaxumAE5651FB",
-            "RootResourceId",
-          ],
-        },
-        "PathPart": "{proxy+}",
-        "RestApiId": {
-          "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
-        },
+        "Name": "api-axum-using-lambda-web-adapter-layer-x86_64",
       },
-      "Type": "AWS::ApiGateway::Resource",
+      "Type": "AWS::ApiGateway::RestApi",
     },
-    "apisystemwithlayerAPIusingaxumproxyANYApiPermissionTestStackapisystemwithlayerAPIusingaxum3BE90064ANYproxy32BBB68D": {
-      "Properties": {
-        "Action": "lambda:InvokeFunction",
-        "FunctionName": {
-          "Fn::GetAtt": [
-            "apisystemwithlayergreetF7497C77",
-            "Arn",
-          ],
-        },
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition",
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region",
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId",
-              },
-              ":",
-              {
-                "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
-              },
-              "/",
-              {
-                "Ref": "apisystemwithlayerAPIusingaxumDeploymentStageprod525A5E6F",
-              },
-              "/*/*",
-            ],
-          ],
-        },
-      },
-      "Type": "AWS::Lambda::Permission",
-    },
-    "apisystemwithlayerAPIusingaxumproxyANYApiPermissionTestTestStackapisystemwithlayerAPIusingaxum3BE90064ANYproxy76B3FDA5": {
-      "Properties": {
-        "Action": "lambda:InvokeFunction",
-        "FunctionName": {
-          "Fn::GetAtt": [
-            "apisystemwithlayergreetF7497C77",
-            "Arn",
-          ],
-        },
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition",
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region",
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId",
-              },
-              ":",
-              {
-                "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
-              },
-              "/test-invoke-stage/*/*",
-            ],
-          ],
-        },
-      },
-      "Type": "AWS::Lambda::Permission",
-    },
-    "apisystemwithlayerAPIusingaxumproxyANYE9763BE6": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyANY6BFD5804": {
       "Properties": {
         "AuthorizationType": "NONE",
         "HttpMethod": "ANY",
@@ -358,7 +407,7 @@ exports[`snapshot test 1`] = `
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "apisystemwithlayergreetF7497C77",
+                    "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814",
                     "Arn",
                   ],
                 },
@@ -368,15 +417,108 @@ exports[`snapshot test 1`] = `
           },
         },
         "ResourceId": {
-          "Ref": "apisystemwithlayerAPIusingaxumproxy15678E58",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyF094462F",
         },
         "RestApiId": {
-          "Ref": "apisystemwithlayerAPIusingaxumAE5651FB",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
         },
       },
       "Type": "AWS::ApiGateway::Method",
     },
-    "apisystemwithlayerLambdaWebAdapter977375BB": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyANYApiPermissionTestRootStackLambdaWebAdapterAMD64ExampleNestedStackapisystemusingwebadapterlayeramd64APIusingaxumx86643C73A052ANYproxy5685E928": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
+              },
+              "/",
+              {
+                "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664DeploymentStageprodCFB0138B",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyANYApiPermissionTestTestRootStackLambdaWebAdapterAMD64ExampleNestedStackapisystemusingwebadapterlayeramd64APIusingaxumx86643C73A052ANYproxy26A0590C": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
+              },
+              "/test-invoke-stage/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyF094462F": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "apisystemusingwebadapterlayeramd64LambdaWebAdapterx866418C345F0": {
       "Properties": {
         "CompatibleArchitectures": [
           "x86_64",
@@ -390,10 +532,10 @@ exports[`snapshot test 1`] = `
       },
       "Type": "AWS::Lambda::LayerVersion",
     },
-    "apisystemwithlayergreetF7497C77": {
+    "apisystemusingwebadapterlayeramd64axumlambdaserver4D38A814": {
       "DependsOn": [
-        "apisystemwithlayergreetServiceRoleDefaultPolicy4580DA18",
-        "apisystemwithlayergreetServiceRoleCFC70060",
+        "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleDefaultPolicy371026B2",
+        "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleC59C35F8",
       ],
       "Properties": {
         "Architectures": [
@@ -411,17 +553,17 @@ exports[`snapshot test 1`] = `
             "RUST_LOG": "debug",
           },
         },
-        "FunctionName": "axum-server-function",
+        "FunctionName": "axum-server-function-x86_64",
         "Handler": "bootstrap",
         "Layers": [
           {
-            "Ref": "apisystemwithlayerLambdaWebAdapter977375BB",
+            "Ref": "apisystemusingwebadapterlayeramd64LambdaWebAdapterx866418C345F0",
           },
         ],
         "MemorySize": 128,
         "Role": {
           "Fn::GetAtt": [
-            "apisystemwithlayergreetServiceRoleCFC70060",
+            "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleC59C35F8",
             "Arn",
           ],
         },
@@ -433,7 +575,7 @@ exports[`snapshot test 1`] = `
       },
       "Type": "AWS::Lambda::Function",
     },
-    "apisystemwithlayergreetServiceRoleCFC70060": {
+    "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleC59C35F8": {
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -464,7 +606,7 @@ exports[`snapshot test 1`] = `
       },
       "Type": "AWS::IAM::Role",
     },
-    "apisystemwithlayergreetServiceRoleDefaultPolicy4580DA18": {
+    "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleDefaultPolicy371026B2": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -479,41 +621,1431 @@ exports[`snapshot test 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "apisystemwithlayergreetServiceRoleDefaultPolicy4580DA18",
+        "PolicyName": "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleDefaultPolicy371026B2",
         "Roles": [
           {
-            "Ref": "apisystemwithlayergreetServiceRoleCFC70060",
+            "Ref": "apisystemusingwebadapterlayeramd64axumlambdaserverServiceRoleC59C35F8",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
   },
-  "Rules": {
-    "CheckBootstrapVersion": {
-      "Assertions": [
-        {
-          "Assert": {
-            "Fn::Not": [
+}
+`;
+
+exports[`snapshot test(root stack) 3`] = `
+{
+  "Outputs": {
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Endpoint70F2C27F": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            {
+              "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664DeploymentStageprod3FB1B83C",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
+  },
+  "Resources": {
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664ANYApiPermissionTestRootStackLambdaHttpAMD64ExampleNestedStackapisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664024ED7B0ANYEECC94B0": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64axumlambdahttp9F88D286",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
               {
-                "Fn::Contains": [
-                  [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                  ],
-                  {
-                    "Ref": "BootstrapVersion",
-                  },
-                ],
+                "Ref": "AWS::Partition",
               },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+              },
+              "/",
+              {
+                "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664DeploymentStageprod3FB1B83C",
+              },
+              "/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664ANYApiPermissionTestTestRootStackLambdaHttpAMD64ExampleNestedStackapisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664024ED7B0ANY94EAE4AB": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64axumlambdahttp9F88D286",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+              },
+              "/test-invoke-stage/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664ANYCBB31C56": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "apisystemusinglambdahttpamd64axumlambdahttp9F88D286",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
             ],
           },
-          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
         },
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+            "RootResourceId",
+          ],
+        },
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Account86A82353": {
+      "DeletionPolicy": "Retain",
+      "DependsOn": [
+        "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
       ],
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664CloudWatchRole9321C2F4",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::ApiGateway::Account",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664CloudWatchRole9321C2F4": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Deployment66FF8104cf176ffd4d04b9810e4f9f7440bd95fe": {
+      "DependsOn": [
+        "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyANY06D72BE0",
+        "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyEEEAAFFA",
+        "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664ANYCBB31C56",
+      ],
+      "Properties": {
+        "Description": "Automatically created by the RestApi construct",
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+        },
+      },
+      "Type": "AWS::ApiGateway::Deployment",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664DeploymentStageprod3FB1B83C": {
+      "DependsOn": [
+        "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Account86A82353",
+      ],
+      "Properties": {
+        "DeploymentId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Deployment66FF8104cf176ffd4d04b9810e4f9f7440bd95fe",
+        },
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+        },
+        "StageName": "prod",
+      },
+      "Type": "AWS::ApiGateway::Stage",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9": {
+      "Properties": {
+        "Name": "api-axum-using-lambda-http-x86_64",
+      },
+      "Type": "AWS::ApiGateway::RestApi",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyANY06D72BE0": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "apisystemusinglambdahttpamd64axumlambdahttp9F88D286",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyEEEAAFFA",
+        },
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyANYApiPermissionTestRootStackLambdaHttpAMD64ExampleNestedStackapisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664024ED7B0ANYproxyF46C81FE": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64axumlambdahttp9F88D286",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+              },
+              "/",
+              {
+                "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664DeploymentStageprod3FB1B83C",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyANYApiPermissionTestTestRootStackLambdaHttpAMD64ExampleNestedStackapisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664024ED7B0ANYproxy9158EDD0": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64axumlambdahttp9F88D286",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+              },
+              "/test-invoke-stage/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyEEEAAFFA": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "apisystemusinglambdahttpamd64axumlambdahttp9F88D286": {
+      "DependsOn": [
+        "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleDefaultPolicy24996F62",
+        "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleF52F57F9",
+      ],
+      "Properties": {
+        "Architectures": [
+          "x86_64",
+        ],
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "HASH-REPLACED.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_LAMBDA_HTTP_IGNORE_STAGE_IN_PATH": "true",
+            "RUST_LOG": "debug",
+          },
+        },
+        "FunctionName": "axum-lambda-http-x86_64",
+        "Handler": "bootstrap",
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleF52F57F9",
+            "Arn",
+          ],
+        },
+        "Runtime": "provided.al2023",
+        "Timeout": 10,
+        "TracingConfig": {
+          "Mode": "Active",
+        },
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleDefaultPolicy24996F62": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleDefaultPolicy24996F62",
+        "Roles": [
+          {
+            "Ref": "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleF52F57F9",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "apisystemusinglambdahttpamd64axumlambdahttpServiceRoleF52F57F9": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+  },
+}
+`;
+
+exports[`snapshot test(root stack) 4`] = `
+{
+  "Outputs": {
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Endpoint8556F385": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            {
+              "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64DeploymentStageprod07EB6A02",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
+  },
+  "Resources": {
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D": {
+      "Properties": {
+        "Name": "api-axum-using-lambda-web-adapter-layer-aarch64",
+      },
+      "Type": "AWS::ApiGateway::RestApi",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64ANYApiPermissionTestRootStackLambdaWebAdapterARM64ExampleNestedStackapisystemusingwebadapterlayeraarch64APIusingaxumaarch64D3F257AEANYC1A00C46": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+              },
+              "/",
+              {
+                "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64DeploymentStageprod07EB6A02",
+              },
+              "/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64ANYApiPermissionTestTestRootStackLambdaWebAdapterARM64ExampleNestedStackapisystemusingwebadapterlayeraarch64APIusingaxumaarch64D3F257AEANY00AAED9C": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+              },
+              "/test-invoke-stage/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64ANYF32BFC12": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+            "RootResourceId",
+          ],
+        },
+        "RestApiId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Account8F7FAB5D": {
+      "DeletionPolicy": "Retain",
+      "DependsOn": [
+        "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+      ],
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64CloudWatchRoleD576FAE1",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::ApiGateway::Account",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64CloudWatchRoleD576FAE1": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Deployment0191C853a9ffbec1c1cd3ae1e75f0073cf8ca79d": {
+      "DependsOn": [
+        "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxyANY8BD2F5AC",
+        "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxy55C2368D",
+        "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64ANYF32BFC12",
+      ],
+      "Properties": {
+        "Description": "Automatically created by the RestApi construct",
+        "RestApiId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+        },
+      },
+      "Type": "AWS::ApiGateway::Deployment",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64DeploymentStageprod07EB6A02": {
+      "DependsOn": [
+        "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Account8F7FAB5D",
+      ],
+      "Properties": {
+        "DeploymentId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Deployment0191C853a9ffbec1c1cd3ae1e75f0073cf8ca79d",
+        },
+        "RestApiId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+        },
+        "StageName": "prod",
+      },
+      "Type": "AWS::ApiGateway::Stage",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxy55C2368D": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxyANY8BD2F5AC": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxy55C2368D",
+        },
+        "RestApiId": {
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxyANYApiPermissionTestRootStackLambdaWebAdapterARM64ExampleNestedStackapisystemusingwebadapterlayeraarch64APIusingaxumaarch64D3F257AEANYproxyD429C8EE": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+              },
+              "/",
+              {
+                "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64DeploymentStageprod07EB6A02",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxyANYApiPermissionTestTestRootStackLambdaWebAdapterARM64ExampleNestedStackapisystemusingwebadapterlayeraarch64APIusingaxumaarch64D3F257AEANYproxy8EBEB031": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
+              },
+              "/test-invoke-stage/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusingwebadapterlayeraarch64LambdaWebAdapteraarch644BD77EE9": {
+      "Properties": {
+        "CompatibleArchitectures": [
+          "arm64",
+        ],
+        "Content": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "HASH-REPLACED.zip",
+        },
+      },
+      "Type": "AWS::Lambda::LayerVersion",
+    },
+    "apisystemusingwebadapterlayeraarch64axumlambdaserver33B8C392": {
+      "DependsOn": [
+        "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRoleDefaultPolicy97579DA8",
+        "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRole400B1305",
+      ],
+      "Properties": {
+        "Architectures": [
+          "arm64",
+        ],
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "HASH-REPLACED.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "PORT": "3000",
+            "RUST_LOG": "debug",
+          },
+        },
+        "FunctionName": "axum-server-function-aarch64",
+        "Handler": "bootstrap",
+        "Layers": [
+          {
+            "Ref": "apisystemusingwebadapterlayeraarch64LambdaWebAdapteraarch644BD77EE9",
+          },
+        ],
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRole400B1305",
+            "Arn",
+          ],
+        },
+        "Runtime": "provided.al2023",
+        "Timeout": 10,
+        "TracingConfig": {
+          "Mode": "Active",
+        },
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRole400B1305": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRoleDefaultPolicy97579DA8": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRoleDefaultPolicy97579DA8",
+        "Roles": [
+          {
+            "Ref": "apisystemusingwebadapterlayeraarch64axumlambdaserverServiceRole400B1305",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+  },
+}
+`;
+
+exports[`snapshot test(root stack) 5`] = `
+{
+  "Outputs": {
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64EndpointDED2D6DC": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            {
+              "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentStageprod4EC88B6F",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
+  },
+  "Resources": {
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71": {
+      "Properties": {
+        "Name": "api-axum-using-lambda-http-aarch64",
+      },
+      "Type": "AWS::ApiGateway::RestApi",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64ANYApiPermissionTestRootStackLambdaHttpARM64ExampleNestedStackapisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64BD481F3EANY906A60B3": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+              },
+              "/",
+              {
+                "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentStageprod4EC88B6F",
+              },
+              "/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64ANYApiPermissionTestTestRootStackLambdaHttpARM64ExampleNestedStackapisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64BD481F3EANY81CCFC84": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+              },
+              "/test-invoke-stage/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64ANYC5659AB9": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+            "RootResourceId",
+          ],
+        },
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64Account32842332": {
+      "DeletionPolicy": "Retain",
+      "DependsOn": [
+        "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+      ],
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64CloudWatchRoleBCF90F43",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::ApiGateway::Account",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64CloudWatchRoleBCF90F43": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentA8251C955f0a4e38f7f0ac0c13e3fde6fae668d8": {
+      "DependsOn": [
+        "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyANYDEB1D932",
+        "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyAD83CB81",
+        "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64ANYC5659AB9",
+      ],
+      "Properties": {
+        "Description": "Automatically created by the RestApi construct",
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+        },
+      },
+      "Type": "AWS::ApiGateway::Deployment",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentStageprod4EC88B6F": {
+      "DependsOn": [
+        "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64Account32842332",
+      ],
+      "Properties": {
+        "DeploymentId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentA8251C955f0a4e38f7f0ac0c13e3fde6fae668d8",
+        },
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+        },
+        "StageName": "prod",
+      },
+      "Type": "AWS::ApiGateway::Stage",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyAD83CB81": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyANYApiPermissionTestRootStackLambdaHttpARM64ExampleNestedStackapisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64BD481F3EANYproxy42742A0B": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+              },
+              "/",
+              {
+                "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentStageprod4EC88B6F",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyANYApiPermissionTestTestRootStackLambdaHttpARM64ExampleNestedStackapisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64BD481F3EANYproxy6DE943A1": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+              },
+              "/test-invoke-stage/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyANYDEB1D932": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyAD83CB81",
+        },
+        "RestApiId": {
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "apisystemusinglambdahttpaarch64axumlambdahttp05ED16F7": {
+      "DependsOn": [
+        "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleDefaultPolicyBAA79359",
+        "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleD5A5CE08",
+      ],
+      "Properties": {
+        "Architectures": [
+          "arm64",
+        ],
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "HASH-REPLACED.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_LAMBDA_HTTP_IGNORE_STAGE_IN_PATH": "true",
+            "RUST_LOG": "debug",
+          },
+        },
+        "FunctionName": "axum-lambda-http-aarch64",
+        "Handler": "bootstrap",
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleD5A5CE08",
+            "Arn",
+          ],
+        },
+        "Runtime": "provided.al2023",
+        "Timeout": 10,
+        "TracingConfig": {
+          "Mode": "Active",
+        },
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleD5A5CE08": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleDefaultPolicyBAA79359": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleDefaultPolicyBAA79359",
+        "Roles": [
+          {
+            "Ref": "apisystemusinglambdahttpaarch64axumlambdahttpServiceRoleD5A5CE08",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
     },
   },
 }

@@ -1,8 +1,13 @@
 [workspace]
 
 members = [
-    "axum-api",
+    "axum-app-core", "axum-lambda-http",
+    "axum-server",
 ]
 resolver = "2"
 
 [workspace.dependencies]
+axum = "0.7"
+tokio = { version = "1.36", features = ["full"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter", "json"] }
