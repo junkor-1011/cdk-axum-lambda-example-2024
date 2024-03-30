@@ -29,7 +29,7 @@ exports[`snapshot test(root stack) 1`] = `
               {
                 "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
               },
-              "/8e5969b60fd89517fe844df3aa394692f01f9b8771659a99bea7bf05c1cfc9ae.json",
+              "/86d9ff60d9c46ca082cac140cc7ec3f77b52661c9658927bf3db5731896026a8.json",
             ],
           ],
         },
@@ -56,7 +56,7 @@ exports[`snapshot test(root stack) 1`] = `
               {
                 "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
               },
-              "/f03c621dcecfa0a9a40fd03cae38b9f5614b34c03477a4c984423e953cedb5fa.json",
+              "/94a2df46b02a03d122242a475b23d79f672d5d27e345d60cbd1be823ad70812e.json",
             ],
           ],
         },
@@ -83,7 +83,7 @@ exports[`snapshot test(root stack) 1`] = `
               {
                 "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
               },
-              "/9e5bc66e4c5ce9fa88b960965279178e3b57f2a13ad8a522fcfed8efa8e4e7ea.json",
+              "/d6a65bdb2704525fe7b33e10011336c570b49a10ec50a20afb9b174e0fb0f591.json",
             ],
           ],
         },
@@ -110,7 +110,7 @@ exports[`snapshot test(root stack) 1`] = `
               {
                 "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
               },
-              "/57e75e7bdd77ba8b03ec807814c7b4b98de04e7d76bf1084260f4f60418c5b89.json",
+              "/bc297f74701d92ab84e97b05dd3f4b166133fafeb106d562501a5ce0b57b61ad.json",
             ],
           ],
         },
