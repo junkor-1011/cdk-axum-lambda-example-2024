@@ -13,6 +13,12 @@ exports[`snapshot test(root stack) 1`] = `
     "LambdaHttpAMD64ExampleNestedStackNestedStackLambdaHttpAMD64ExampleNestedStackNestedStackResourceF44BEBEF": {
       "DeletionPolicy": "Delete",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpAMD64Example",
+          },
+        ],
         "TemplateURL": {
           "Fn::Join": [
             "",
@@ -40,6 +46,12 @@ exports[`snapshot test(root stack) 1`] = `
     "LambdaHttpARM64ExampleNestedStackNestedStackLambdaHttpARM64ExampleNestedStackNestedStackResource96BE0E6A": {
       "DeletionPolicy": "Delete",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpARM64Example",
+          },
+        ],
         "TemplateURL": {
           "Fn::Join": [
             "",
@@ -67,6 +79,12 @@ exports[`snapshot test(root stack) 1`] = `
     "LambdaWebAdapterAMD64ExampleNestedStackNestedStackLambdaWebAdapterAMD64ExampleNestedStackNestedStackResource5E068E1B": {
       "DeletionPolicy": "Delete",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterAMD64Example",
+          },
+        ],
         "TemplateURL": {
           "Fn::Join": [
             "",
@@ -94,6 +112,12 @@ exports[`snapshot test(root stack) 1`] = `
     "LambdaWebAdapterARM64ExampleNestedStackNestedStackLambdaWebAdapterARM64ExampleNestedStackNestedStackResource4545B0A2": {
       "DeletionPolicy": "Delete",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterARM64Example",
+          },
+        ],
         "TemplateURL": {
           "Fn::Join": [
             "",
@@ -346,11 +370,17 @@ exports[`snapshot test(root stack) 2`] = `
             ],
           },
         ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemusingwebadapterlayeramd64APIusingaxumx8664Deployment2F7070F26255e0d08ae0c953b8fe519c8c57ab30": {
+    "apisystemusingwebadapterlayeramd64APIusingaxumx8664Deployment2F7070F227c5673dd588779e5dd241ed53cceb69": {
       "DependsOn": [
         "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyANY6BFD5804",
         "apisystemusingwebadapterlayeramd64APIusingaxumx8664proxyF094462F",
@@ -370,18 +400,30 @@ exports[`snapshot test(root stack) 2`] = `
       ],
       "Properties": {
         "DeploymentId": {
-          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664Deployment2F7070F26255e0d08ae0c953b8fe519c8c57ab30",
+          "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664Deployment2F7070F227c5673dd588779e5dd241ed53cceb69",
         },
         "RestApiId": {
           "Ref": "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F",
         },
         "StageName": "prod",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::Stage",
     },
     "apisystemusingwebadapterlayeramd64APIusingaxumx8664E276E66F": {
       "Properties": {
         "Name": "api-axum-using-lambda-web-adapter-layer-x86_64",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::RestApi",
     },
@@ -568,6 +610,12 @@ exports[`snapshot test(root stack) 2`] = `
           ],
         },
         "Runtime": "provided.al2023",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterAMD64Example",
+          },
+        ],
         "Timeout": 10,
         "TracingConfig": {
           "Mode": "Active",
@@ -601,6 +649,12 @@ exports[`snapshot test(root stack) 2`] = `
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
               ],
             ],
+          },
+        ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterAMD64Example",
           },
         ],
       },
@@ -831,11 +885,17 @@ exports[`snapshot test(root stack) 3`] = `
             ],
           },
         ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Deployment66FF8104cf176ffd4d04b9810e4f9f7440bd95fe": {
+    "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Deployment66FF810422611869a295e006efc6e4cae20e7676": {
       "DependsOn": [
         "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyANY06D72BE0",
         "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664proxyEEEAAFFA",
@@ -855,18 +915,30 @@ exports[`snapshot test(root stack) 3`] = `
       ],
       "Properties": {
         "DeploymentId": {
-          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Deployment66FF8104cf176ffd4d04b9810e4f9f7440bd95fe",
+          "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664Deployment66FF810422611869a295e006efc6e4cae20e7676",
         },
         "RestApiId": {
           "Ref": "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9",
         },
         "StageName": "prod",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::Stage",
     },
     "apisystemusinglambdahttpamd64APIusingaxumandlambdahttpx8664EFD7A2B9": {
       "Properties": {
         "Name": "api-axum-using-lambda-http-x86_64",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::RestApi",
     },
@@ -1034,6 +1106,12 @@ exports[`snapshot test(root stack) 3`] = `
           ],
         },
         "Runtime": "provided.al2023",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpAMD64Example",
+          },
+        ],
         "Timeout": 10,
         "TracingConfig": {
           "Mode": "Active",
@@ -1093,6 +1171,12 @@ exports[`snapshot test(root stack) 3`] = `
             ],
           },
         ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpAMD64Example",
+          },
+        ],
       },
       "Type": "AWS::IAM::Role",
     },
@@ -1134,6 +1218,12 @@ exports[`snapshot test(root stack) 4`] = `
     "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D": {
       "Properties": {
         "Name": "api-axum-using-lambda-web-adapter-layer-aarch64",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterARM64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::RestApi",
     },
@@ -1303,11 +1393,17 @@ exports[`snapshot test(root stack) 4`] = `
             ],
           },
         ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterARM64Example",
+          },
+        ],
       },
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Deployment0191C853a9ffbec1c1cd3ae1e75f0073cf8ca79d": {
+    "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Deployment0191C8538893ec74d3cff426b313ea017a9e486c": {
       "DependsOn": [
         "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxyANY8BD2F5AC",
         "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64proxy55C2368D",
@@ -1327,12 +1423,18 @@ exports[`snapshot test(root stack) 4`] = `
       ],
       "Properties": {
         "DeploymentId": {
-          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Deployment0191C853a9ffbec1c1cd3ae1e75f0073cf8ca79d",
+          "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch64Deployment0191C8538893ec74d3cff426b313ea017a9e486c",
         },
         "RestApiId": {
           "Ref": "apisystemusingwebadapterlayeraarch64APIusingaxumaarch641E22155D",
         },
         "StageName": "prod",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterARM64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::Stage",
     },
@@ -1519,6 +1621,12 @@ exports[`snapshot test(root stack) 4`] = `
           ],
         },
         "Runtime": "provided.al2023",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterARM64Example",
+          },
+        ],
         "Timeout": 10,
         "TracingConfig": {
           "Mode": "Active",
@@ -1552,6 +1660,12 @@ exports[`snapshot test(root stack) 4`] = `
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
               ],
             ],
+          },
+        ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaWebAdapterARM64Example",
           },
         ],
       },
@@ -1619,6 +1733,12 @@ exports[`snapshot test(root stack) 5`] = `
     "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71": {
       "Properties": {
         "Name": "api-axum-using-lambda-http-aarch64",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpARM64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::RestApi",
     },
@@ -1788,11 +1908,17 @@ exports[`snapshot test(root stack) 5`] = `
             ],
           },
         ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpARM64Example",
+          },
+        ],
       },
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentA8251C955f0a4e38f7f0ac0c13e3fde6fae668d8": {
+    "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentA8251C95fa4774d9358db808ec9d5f490c1de8db": {
       "DependsOn": [
         "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyANYDEB1D932",
         "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64proxyAD83CB81",
@@ -1812,12 +1938,18 @@ exports[`snapshot test(root stack) 5`] = `
       ],
       "Properties": {
         "DeploymentId": {
-          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentA8251C955f0a4e38f7f0ac0c13e3fde6fae668d8",
+          "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch64DeploymentA8251C95fa4774d9358db808ec9d5f490c1de8db",
         },
         "RestApiId": {
           "Ref": "apisystemusinglambdahttpaarch64APIusingaxumandlambdahttpaarch640AE40A71",
         },
         "StageName": "prod",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpARM64Example",
+          },
+        ],
       },
       "Type": "AWS::ApiGateway::Stage",
     },
@@ -1985,6 +2117,12 @@ exports[`snapshot test(root stack) 5`] = `
           ],
         },
         "Runtime": "provided.al2023",
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpARM64Example",
+          },
+        ],
         "Timeout": 10,
         "TracingConfig": {
           "Mode": "Active",
@@ -2018,6 +2156,12 @@ exports[`snapshot test(root stack) 5`] = `
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
               ],
             ],
+          },
+        ],
+        "Tags": [
+          {
+            "Key": "Cost",
+            "Value": "LambdaHttpARM64Example",
           },
         ],
       },
