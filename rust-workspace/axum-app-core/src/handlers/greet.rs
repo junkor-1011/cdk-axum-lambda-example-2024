@@ -4,7 +4,7 @@ use hyper::StatusCode;
 use serde::{Deserialize, Serialize};
 
 pub async fn greet_get() -> impl IntoResponse {
-    tracing::debug!("greet");
+    tracing::debug!("greet get");
 
     let body = GreetGetResponse {
         message: "Hello, World!!!".to_string(),
@@ -15,6 +15,8 @@ pub async fn greet_get() -> impl IntoResponse {
 }
 
 pub async fn greet_post(Json(payload): Json<GreetPostRequest>) -> impl IntoResponse {
+    tracing::debug!("greet post");
+
     let GreetPostRequest { name } = payload;
     let body = GreetPostResponse {
         message: format!("Hello, {name}"),
