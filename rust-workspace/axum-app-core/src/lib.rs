@@ -7,6 +7,7 @@ use axum::{
 use handlers::{
     greet::{greet_get, greet_post},
     reqwest_example::{get_ipv4, get_ipv4_simple},
+    root,
 };
 
 pub fn create_app() -> Router {
@@ -19,8 +20,4 @@ pub fn create_app() -> Router {
         .route("/check-ipv4-simple", get(get_ipv4_simple))
         .route("/check-ipv4", get(get_ipv4))
         .with_state(reqwest_client)
-}
-
-pub async fn root() -> &'static str {
-    "Hello, world!"
 }
