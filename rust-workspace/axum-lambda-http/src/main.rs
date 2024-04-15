@@ -9,6 +9,8 @@ async fn main() -> Result<(), lambda_http::Error> {
 
     tracing_subscriber::fmt()
         .json()
+        .with_current_span(false)
+        .with_ansi(false)
         .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
         .init();
 
