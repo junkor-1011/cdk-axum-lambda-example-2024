@@ -6,15 +6,19 @@ use axum::{
 };
 use handlers::{
     greet::{greet_get, greet_post},
-    reqwest_example::get_ipv4_simple,
+    reqwest_example::{get_ipv4, get_ipv4_simple},
 };
 
 pub fn create_app() -> Router {
+    let reqwest_client = reqwest::Client::new();
+
     Router::new()
         .route("/", get(root))
         .route("/greet", get(greet_get))
         .route("/greet", post(greet_post))
-        .route("/check-ipv4", get(get_ipv4_simple))
+        .route("/check-ipv4-simple", get(get_ipv4_simple))
+        .route("/check-ipv4", get(get_ipv4))
+        .with_state(reqwest_client)
 }
 
 pub async fn root() -> &'static str {

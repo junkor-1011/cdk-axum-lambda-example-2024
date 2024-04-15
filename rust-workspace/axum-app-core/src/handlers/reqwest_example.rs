@@ -1,10 +1,10 @@
-use axum::{response::IntoResponse, Json};
+use axum::{extract::State, response::IntoResponse, Json};
 use hyper::StatusCode;
 use serde::{Deserialize, Serialize};
 
 #[tracing::instrument]
 pub async fn get_ipv4_simple() -> Result<Json<GetIpv4Response>, AppError> {
-    tracing::debug!("get ipv4");
+    tracing::debug!("get ipv4 simple");
 
     let ip = reqwest::get("https://checkip.amazonaws.com")
         .await?
@@ -13,7 +13,35 @@ pub async fn get_ipv4_simple() -> Result<Json<GetIpv4Response>, AppError> {
         .trim()
         .to_string();
 
-    let response = GetIpv4Response { ip };
+    let response = GetIpv4Response {
+        ip,
+        message: "get ipv4 from https://checkip.amazonaws.com".into(),
+        date: chrono::Utc::now().to_string(),
+    };
+
+    Ok(Json(response))
+}
+
+#[tracing::instrument]
+pub async fn get_ipv4(
+    State(client): State<reqwest::Client>,
+) -> Result<Json<GetIpv4Response>, AppError> {
+    tracing::debug!("get ipv4 with state");
+
+    let ip = client
+        .get("https://checkip.amazonaws.com")
+        .send()
+        .await?
+        .text()
+        .await?
+        .trim()
+        .to_string();
+
+    let response = GetIpv4Response {
+        ip,
+        message: "get ipv4 from https://checkip.amazonaws.com by state client".into(),
+        date: chrono::Utc::now().to_string(),
+    };
 
     Ok(Json(response))
 }
@@ -21,6 +49,8 @@ pub async fn get_ipv4_simple() -> Result<Json<GetIpv4Response>, AppError> {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct GetIpv4Response {
     ip: String,
+    message: String,
+    date: String,
 }
 
 pub struct AppError(anyhow::Error);
