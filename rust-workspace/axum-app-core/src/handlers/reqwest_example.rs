@@ -2,6 +2,7 @@ use axum::{response::IntoResponse, Json};
 use hyper::StatusCode;
 use serde::{Deserialize, Serialize};
 
+#[tracing::instrument]
 pub async fn get_ipv4_simple() -> Result<Json<GetIpv4Response>, AppError> {
     tracing::debug!("get ipv4");
 

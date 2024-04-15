@@ -3,6 +3,7 @@ use chrono::Utc;
 use hyper::StatusCode;
 use serde::{Deserialize, Serialize};
 
+#[tracing::instrument]
 pub async fn greet_get() -> impl IntoResponse {
     tracing::debug!("greet get");
 
@@ -14,6 +15,7 @@ pub async fn greet_get() -> impl IntoResponse {
     (StatusCode::OK, Json(body))
 }
 
+#[tracing::instrument]
 pub async fn greet_post(Json(payload): Json<GreetPostRequest>) -> impl IntoResponse {
     tracing::debug!("greet post");
 
@@ -32,7 +34,7 @@ pub struct GreetGetResponse {
     date: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]
 pub struct GreetPostRequest {
     name: String,
 }
