@@ -2,7 +2,6 @@
   "type": "module",
   "name": "cdk-app",
   "version": "0.1.0",
-  "packageManager": "pnpm@8.15.5",
   "bin": {
     "cdk-app": "bin/cdk-app.js"
   },
@@ -14,23 +13,24 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.1",
-    "@types/node": "20.12.7",
-    "@vitest/coverage-v8": "^1.5.0",
-    "@vitest/ui": "^1.5.0",
-    "aws-cdk": "2.138.0",
-    "esbuild": "^0.20.2",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "tsx": "^4.7.2",
-    "typescript": "~5.4.5",
-    "vite": "^5.2.10",
-    "vitest": "^1.5.0"
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "22.5.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "@vitest/ui": "^2.0.5",
+    "aws-cdk": "2.154.1",
+    "esbuild": "^0.23.1",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "tsx": "^4.18.0",
+    "typescript": "~5.5.4",
+    "vite": "^5.4.2",
+    "vitest": "^2.0.5"
   },
   "dependencies": {
-    "aws-cdk-lib": "2.138.0",
-    "cargo-lambda-cdk": "^0.0.20",
+    "aws-cdk-lib": "2.154.1",
+    "cargo-lambda-cdk": "^0.0.22",
     "constructs": "^10.3.0",
     "source-map-support": "^0.5.21"
-  }
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
 }
